@@ -46,3 +46,4 @@ private:
     std::vector<Customer *> m_customers;
     int m_NumCustomers;
 };
+

@@ -1,9 +1,7 @@
 /*
 Project for CS 201
-
 Author: Abia Khan
 Student ID: ac6212
-
 */
 
 
@@ -67,19 +65,22 @@ void Customer::addAccount(BankAccount &account)
 { 
     m_accounts.push_back(&account); 
 }
+
 bool Customer::removeAccount(BankAccount account)
 {
-    for (auto i = m_accounts.begin(); i != m_accounts.end(); i++)
+    for (auto i = 0; i < m_accounts.size(); i++) 
     {
-        if (*i == &account)
-        {
-            m_accounts.erase(i);
-            return true;
-        }
-    }
+        if (m_accounts[i]->getBalance() == account.getBalance()) 
+        { 
+            m_accounts.erase(m_accounts.begin() + i);            
+            return true;        
+        }    
+    }    
     
     return false;
 }
+
+
 
 //Bank class implementation
 Bank::Bank(std::string name) : m_name(name), m_NumCustomers(0) {}
@@ -110,6 +111,7 @@ bool Bank::removeCustomer(std::string name)
     
     return false;
 }
+
 bool Bank::transfer(BankAccount &from_account, BankAccount &to_account, float amount)
 {
     if (from_account.getBalance() < amount)

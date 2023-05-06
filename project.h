@@ -21,7 +21,7 @@ class Customer
 public:
     Customer(std::string name);
     std::string getName(); 
-    std::vector<BankAccount *> getAccounts();
+    std::vector<BankAccount *> getAccounts(); 
     int getNumAccounts() const;  //const added 
     void addAccount(BankAccount &account);
     bool removeAccount(BankAccount account);

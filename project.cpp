@@ -80,8 +80,6 @@ bool Customer::removeAccount(BankAccount account)
     return false;
 }
 
-
-
 //Bank class implementation
 Bank::Bank(std::string name) : m_name(name), m_NumCustomers(0) {}
 std::vector<Customer *> Bank::getCustomers() 

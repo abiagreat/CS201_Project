@@ -66,7 +66,6 @@ void Customer::addAccount(BankAccount &account)
 { 
     m_accounts.push_back(&account); 
 }
-
 bool Customer::removeAccount(BankAccount account)
 {
     for (auto i = 0; i < m_accounts.size(); i++) 
@@ -110,7 +109,6 @@ bool Bank::removeCustomer(std::string name)
     
     return false;
 }
-
 bool Bank::transfer(BankAccount &from_account, BankAccount &to_account, float amount)
 {
     if (from_account.getBalance() < amount)

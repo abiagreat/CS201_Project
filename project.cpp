@@ -1,6 +1,5 @@
 /*
 Project for CS 201
-Author: Abia Khan
 Date: 5/5/2023
 */
 

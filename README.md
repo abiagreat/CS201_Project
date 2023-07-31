@@ -1,9 +1,10 @@
 # CS201_Project
 
 
-Code in C++
+**Simulation of a Bank Account System**
 
-Simulation of a Bank Account System
+
+Code in C++
 
 
 project.cpp and project.h are updated
